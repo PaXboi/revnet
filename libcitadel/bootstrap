@@ -1,0 +1,5 @@
+#!/bin/sh
+   
+autoconf
+autoheader
+grep '^#define LIBCITADEL_VERSION_NUMBER' lib/libcitadel.h | sed 's/[^0-9]*//g' >package-version.txt
